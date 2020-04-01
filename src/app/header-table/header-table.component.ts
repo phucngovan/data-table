@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header-table.component.scss']
 })
 export class HeaderTableComponent implements OnInit {
+  public showAdvanced : boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+  resetFilter() {
   }
 
 }

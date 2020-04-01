@@ -1,13 +1,73 @@
 <p>header-table works!</p>
-<alert type="success">
-  <strong>Well done!</strong> You successfully read this important alert message.
-</alert>
-<alert type="info">
-  <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
-</alert>
-<alert type="warning">
-  <strong>Warning!</strong> Better check yourself, you're not looking too good.
-</alert>
-<alert type="danger">
-  <strong>Oh snap!</strong> Change a few things up and try submitting again.
-</alert>
+<div class="header">
+    <h4 class="header-top border-bottom">
+        THIẾT BỊ
+    </h4>
+    <div class="filter">
+        <div class="row">
+            <div class="col-md-6">
+                <form>
+                    <div class="option-filter row">
+                        <div class="imei col-md-4">
+                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Imei">
+                        </div>
+                        <div class="name col-md-4">
+                            <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="Tên thiết bị">
+                        </div>
+                        <div class="category-device col-md-4">
+                            <!-- <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Loại thiết bị"> -->
+                            <select class="form-control" id="exampleFormControlSelect1">
+                                <option>1</option>
+                                <option>2</option>
+                              </select>
+                        </div>
+                    </div>
+                    <div class="filter-advanced row" *ngIf="showAdvanced">
+                        <div class="name-device col-md-4">
+                            <input type="text" class="form-control"  placeholder="Mã máy/biển số">
+                        </div>
+                        <div class="name-device col-md-4">
+                            <input type="text" class="form-control"  placeholder="Số sim">
+                        </div>
+                        <div class="name-device col-md-4">
+                            <input type="text" class="form-control"  placeholder="Loại sim">
+                        </div>
+                        <div class="name-device col-md-4">
+                            <input type="text" class="form-control" placeholder="Thời gian kích hoạt">
+                        </div>
+                        <div class="name-device col-md-4">
+                            <input type="text" class="form-control" placeholder="Thời gian bắt đầu">
+                        </div>
+                        <div class="name-device col-md-4">
+                            <input type="text" class="form-control" placeholder="Thời gian kết thúc">
+                        </div>
+                        <div class="name-device col-md-4">
+                            <input type="text" class="form-control"  placeholder="Hạn dịch vụ">
+                        </div>
+                        <div class="name-device col-md-4">
+                            <input type="text" class="form-control"  placeholder="Trạng thái">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <div class="custom-control custom-checkbox mb-3">
+                    <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+                    <label class="custom-control-label" for="customCheck">Tài khoản con</label>
+                    <button type="button"  class="btn btn-outline-primary border-circle"><i class="fas fa-search" aria-hidden="true"></i> Tìm kiếm</button>
+                    <button type="button" (click)="showAdvanced = !showAdvanced" class="btn btn-outline-primary border-circle"><i class="fas fa-filter"></i> Tìm kiếm nâng cao</button>
+                    <button type="button"  class="btn btn-outline-primary border-circle"><i class="fas fa-sync"></i> Đặt lại</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="action-table">
+        <button type="button" class="btn btn-primary border-circle-50"
+        tooltip="Thêm nhóm thiết bị">
+        <i class="fas fa-project-diagram"></i>
+        </button>
+
+    </div>
+</div>
+

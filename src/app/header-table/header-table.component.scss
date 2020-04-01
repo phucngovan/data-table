@@ -1,0 +1,36 @@
+.header {
+ background: white;
+ width: 98%;
+ margin: auto;
+ .header-top {
+     color: black;
+     padding-left: 35px;
+     padding-top: 15px;
+     padding-bottom: 15px;
+ }
+ .filter {
+     padding-left: 25px;
+ }
+ .action-table {
+    border-bottom: 1px dotted gray;
+    border-top: 1px dotted gray;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 30px 30px 30px 30px;
+ }
+}
+.border-circle {
+    border-radius: 1.25rem;
+    margin-left: 10px;
+}
+.border-circle-50 {
+    border-radius: 50%;
+    height: 2.5rem;
+    width: 2.5rem;
+    i {
+        font-size: 13px;
+    }
+}
+.name-device {
+    margin-top: 15px;
+}

@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderTableComponent } from './header-table/header-table.component';
 import {AlertModule} from 'ngx-bootstrap';
+import {TooltipModule} from 'ngx-bootstrap';
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,8 @@ import {AlertModule} from 'ngx-bootstrap';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AlertModule.forRoot()
+    AlertModule.forRoot(),
+    TooltipModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
