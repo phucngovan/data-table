@@ -1,73 +1,159 @@
-<p>header-table works!</p>
-<div class="header">
-    <h4 class="header-top border-bottom">
-        THIẾT BỊ
-    </h4>
-    <div class="filter">
-        <div class="row">
-            <div class="col-md-6">
-                <form>
-                    <div class="option-filter row">
-                        <div class="imei col-md-4">
-                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Imei">
-                        </div>
-                        <div class="name col-md-4">
-                            <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="Tên thiết bị">
-                        </div>
-                        <div class="category-device col-md-4">
-                            <!-- <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Loại thiết bị"> -->
-                            <select class="form-control" id="exampleFormControlSelect1">
-                                <option>1</option>
-                                <option>2</option>
-                              </select>
-                        </div>
-                    </div>
-                    <div class="filter-advanced row" *ngIf="showAdvanced">
-                        <div class="name-device col-md-4">
-                            <input type="text" class="form-control"  placeholder="Mã máy/biển số">
-                        </div>
-                        <div class="name-device col-md-4">
-                            <input type="text" class="form-control"  placeholder="Số sim">
-                        </div>
-                        <div class="name-device col-md-4">
-                            <input type="text" class="form-control"  placeholder="Loại sim">
-                        </div>
-                        <div class="name-device col-md-4">
-                            <input type="text" class="form-control" placeholder="Thời gian kích hoạt">
-                        </div>
-                        <div class="name-device col-md-4">
-                            <input type="text" class="form-control" placeholder="Thời gian bắt đầu">
-                        </div>
-                        <div class="name-device col-md-4">
-                            <input type="text" class="form-control" placeholder="Thời gian kết thúc">
-                        </div>
-                        <div class="name-device col-md-4">
-                            <input type="text" class="form-control"  placeholder="Hạn dịch vụ">
-                        </div>
-                        <div class="name-device col-md-4">
-                            <input type="text" class="form-control"  placeholder="Trạng thái">
-                        </div>
-                    </div>
-                </form>
+<div class="table-manager-device">
+  <h4 class="header-top border-bottom">
+    THIẾT BỊ
+  </h4>
+  <div class="filter">
+    <div class="row">
+      <div class="col-md-6">
+        <form>
+          <div class="option-filter row">
+            <div class="imei col-md-4">
+              <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Imei">
             </div>
-            <div class="col-md-6">
-                <div class="custom-control custom-checkbox mb-3">
-                    <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
-                    <label class="custom-control-label" for="customCheck">Tài khoản con</label>
-                    <button type="button"  class="btn btn-outline-primary border-circle"><i class="fas fa-search" aria-hidden="true"></i> Tìm kiếm</button>
-                    <button type="button" (click)="showAdvanced = !showAdvanced" class="btn btn-outline-primary border-circle"><i class="fas fa-filter"></i> Tìm kiếm nâng cao</button>
-                    <button type="button"  class="btn btn-outline-primary border-circle"><i class="fas fa-sync"></i> Đặt lại</button>
-                </div>
+            <div class="name col-md-4">
+              <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="Tên thiết bị">
             </div>
-
+            <div class="category-device col-md-4">
+              <!-- <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Loại thiết bị"> -->
+              <select class="form-control" id="exampleFormControlSelect1">
+                <option>1</option>
+                <option>2</option>
+              </select>
+            </div>
+          </div>
+          <div class="filter-advanced row" *ngIf="showAdvanced">
+            <div class="name-device col-md-4">
+              <input type="text" class="form-control" placeholder="Mã máy/biển số">
+            </div>
+            <div class="name-device col-md-4">
+              <input type="text" class="form-control" placeholder="Số sim">
+            </div>
+            <div class="name-device col-md-4">
+              <input type="text" class="form-control" placeholder="Loại sim">
+            </div>
+            <div class="name-device col-md-4">
+              <input type="text" class="form-control" placeholder="Thời gian kích hoạt">
+            </div>
+            <div class="name-device col-md-4">
+              <input type="text" class="form-control" placeholder="Thời gian bắt đầu">
+            </div>
+            <div class="name-device col-md-4">
+              <input type="text" class="form-control" placeholder="Thời gian kết thúc">
+            </div>
+            <div class="name-device col-md-4">
+              <input type="text" class="form-control" placeholder="Hạn dịch vụ">
+            </div>
+            <div class="name-device col-md-4">
+              <input type="text" class="form-control" placeholder="Trạng thái">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-6">
+        <div class="custom-control custom-checkbox mb-3">
+          <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+          <label class="custom-control-label" for="customCheck">Tài khoản con</label>
+          <button type="button" class="btn btn-outline-primary border-circle"><i class="fas fa-search"
+                                                                                 aria-hidden="true"></i> Tìm kiếm
+          </button>
+          <button type="button" (click)="showAdvanced = !showAdvanced" class="btn btn-outline-primary border-circle"><i
+            class="fas fa-filter"></i> Tìm kiếm nâng cao
+          </button>
+          <button type="button" class="btn btn-outline-primary border-circle"><i class="fas fa-sync"></i> Đặt lại
+          </button>
         </div>
+      </div>
     </div>
-    <div class="action-table">
-        <button type="button" class="btn btn-primary border-circle-50"
-        tooltip="Thêm nhóm thiết bị">
-        <i class="fas fa-project-diagram"></i>
-        </button>
-
+  </div>
+  <div class="action-table">
+    <!--      dropdown-->
+    <div class="btn-group margin-right-10" dropdown>
+      <button  id="button-animated" dropdownToggle type="button" class="btn btn-primary dropdown-toggle border-circle-50"
+              aria-controls="dropdown-animated" tooltip="Xuất dữ liệu">
+        <i class="fas fa-file-export"></i>
+      </button>
+      <ul id="dropdown-animated" *dropdownMenu class="dropdown-menu"
+          role="menu" aria-labelledby="button-animated">
+        <li role="menuitem"><a class="dropdown-item" href="#">Tải xuống (.xlsx)</a></li>
+        <li role="menuitem"><a class="dropdown-item" href="#">Tải xuống tất cả (.xlsx)</a>
+        </li>
+      </ul>
     </div>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary border-circle-50"
+            tooltip="Thêm nhóm thiết bị" data-toggle="modal" data-target="#add-Device">
+      <i class="fas fa-project-diagram"></i>
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="add-Device" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Thêm nhóm thiết bị</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                Tên nhóm<label for="device" class="color-red">*</label>
+                <input type="text" class="form-control" id="device" placeholder="">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Thêm</button>
+            <button type="button" class="btn btn-light" data-dismiss="modal">Đóng</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--  table-data-->
+<div class="data-table">
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">
+        <div class="custom-control custom-checkbox mb-3">
+          <input type="checkbox" class="custom-control-input" id="custom" name="example1">
+          <label class="custom-control-label" for="custom"></label>
+        </div>
+      </th>
+      <th scope="col">#</th>
+      <th scope="col">Tài khoản</th>
+      <th scope="col">Imei</th>
+      <th scope="col">Tên</th>
+      <th scope="col">Loại</th>
+      <th scope="col">Sim</th>
+      <th scope="col">Hạn dịch vụ</th>
+      <th scope="col">Hạn bảo hành</th>
+      <th scope="col">Chức năng</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let data of datas">
+      <td scope="col"></td>
+      <td scope="col">
+        <div class="custom-control custom-checkbox mb-3">
+          <input type="checkbox" class="custom-control-input" id="custom-{{data.id}}" name="example1">
+          <label class="custom-control-label" for="custom-{{data.id}}"></label>
+        </div>
+      </td>
+      <td scope="row">{{data.id}}</td>
+      <td>{{data.userName}}</td>
+      <td>{{data.imei}}</td>
+      <td>{{data.name}}</td>
+      <td>{{data.typeName}}</td>
+      <td>{{data.simno}}</td>
+      <td>{{data.serviceExpire | date: 'shortDate'}}</td>
+      <td>{{data.warrantyExpiredDate}}</td>
+      <td><i class="fas fa-trash"></i>&nbsp;&nbsp;&nbsp; <i class="fas fa-edit"></i></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
 </div>
 
