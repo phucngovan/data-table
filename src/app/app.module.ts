@@ -7,6 +7,9 @@ import {TooltipModule} from 'ngx-bootstrap';
 import {BsDropdownModule} from 'ngx-bootstrap';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {SelectDropDownModule} from 'ngx-select-dropdown';
+import {FormsModule} from '@angular/forms';
+import {BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,8 +21,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AlertModule.forRoot(),
     TooltipModule.forRoot(),
     BsDropdownModule.forRoot(),
+    BsDatepickerModule.forRoot(),
     BrowserAnimationsModule,
-    BrowserModule
+    BrowserModule,
+    SelectDropDownModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,2 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@fortawesome\fontawesome-free/css/all.min.css';
+//config ngx-select-dropdown
+.ngx-dropdown-container[_ngcontent-ese-c47] button[_ngcontent-ese-c47] span[_ngcontent-ese-c47] {
+  color: gray !important;
+}
+.ngx-dropdown-container[_ngcontent-bai-c47] button[_ngcontent-bai-c47] .nsdicon-angle-down[_ngcontent-bai-c47]::before {
+  top : 5px !important;
+}

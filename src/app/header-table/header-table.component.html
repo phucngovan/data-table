@@ -14,11 +14,11 @@
               <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="Tên thiết bị">
             </div>
             <div class="category-device col-md-4">
-              <!-- <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Loại thiết bị"> -->
-              <select class="form-control" id="exampleFormControlSelect1">
-                <option>1</option>
-                <option>2</option>
-              </select>
+              <ngx-select-dropdown (change)="selectionChanged($event)"
+                                   [multiple]="true"
+                                   [config]="config"
+                                   [options]="dropdownOptions"
+              ></ngx-select-dropdown>
             </div>
           </div>
           <div class="filter-advanced row" *ngIf="showAdvanced">
@@ -29,30 +29,53 @@
               <input type="text" class="form-control" placeholder="Số sim">
             </div>
             <div class="name-device col-md-4">
-              <input type="text" class="form-control" placeholder="Loại sim">
+              <ngx-select-dropdown (change)="selectionChanged($event)"
+                                   [multiple]="true"
+                                   [config]="configSim"
+                                   [options]="dropdownSim"
+              ></ngx-select-dropdown>
             </div>
             <div class="name-device col-md-4">
-              <input type="text" class="form-control" placeholder="Thời gian kích hoạt">
+              <ngx-select-dropdown (change)="selectionChanged($event)"
+                                   [multiple]="true"
+                                   [config]="activeTime"
+                                   [options]="dropdownActiveTime"
+              ></ngx-select-dropdown>
+            </div>
+            <div class="name-device col-md-4 form-group">
+              <input type="text"
+                     placeholder="Thời gian bắt đầu"
+                     class="form-control"
+                     bsDatepicker>
             </div>
             <div class="name-device col-md-4">
-              <input type="text" class="form-control" placeholder="Thời gian bắt đầu">
+              <input type="text"
+                     placeholder="Thời gian kết thúc"
+                     class="form-control"
+                     bsDatepicker>
             </div>
             <div class="name-device col-md-4">
-              <input type="text" class="form-control" placeholder="Thời gian kết thúc">
+<!--              <input type="text" class="form-control" placeholder="Hạn dịch vụ">-->
+                  <ngx-select-dropdown (change)="selectionChanged($event)"
+                                         [multiple]="true"
+                                         [config]="termService"
+                                         [options]="categoryService"
+                  ></ngx-select-dropdown>
             </div>
-            <div class="name-device col-md-4">
-              <input type="text" class="form-control" placeholder="Hạn dịch vụ">
-            </div>
-            <div class="name-device col-md-4">
-              <input type="text" class="form-control" placeholder="Trạng thái">
+            <div class="name-device col-md-4 form-group">
+              <ngx-select-dropdown (change)="selectionChanged($event)"
+                                   [multiple]="false"
+                                   [config]="configStatus"
+                                   [options]="optionStatus"
+              ></ngx-select-dropdown>
             </div>
           </div>
         </form>
       </div>
       <div class="col-md-6">
-        <div class="custom-control custom-checkbox mb-3">
+        <div class="custom-control custom-checkbox mb-3 checkbox-tkc">
           <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
-          <label class="custom-control-label" for="customCheck">Tài khoản con</label>
+          <label class="custom-control-label tkc" for="customCheck">Tài khoản con</label>
           <button type="button" class="btn btn-outline-primary border-circle"><i class="fas fa-search"
                                                                                  aria-hidden="true"></i> Tìm kiếm
           </button>
@@ -134,7 +157,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let data of datas">
+    <tr *ngFor="let data of fakeData">
       <td scope="col"></td>
       <td scope="col">
         <div class="custom-control custom-checkbox mb-3">
@@ -150,7 +173,7 @@
       <td>{{data.simno}}</td>
       <td>{{data.serviceExpire | date: 'shortDate'}}</td>
       <td>{{data.warrantyExpiredDate}}</td>
-      <td><i class="fas fa-trash"></i>&nbsp;&nbsp;&nbsp; <i class="fas fa-edit"></i></td>
+      <td><i class="fas fa-trash"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fas fa-edit"></i></td>
     </tr>
     </tbody>
   </table>
