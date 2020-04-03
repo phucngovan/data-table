@@ -8,12 +8,18 @@ import {BsDropdownModule} from 'ngx-bootstrap';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {SelectDropDownModule} from 'ngx-select-dropdown';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { TabsModule } from 'ngx-bootstrap';
+import { AddDeviceComponent } from './add-device/add-device.component';
+import { EditManagerDeviceComponent } from './edit-manager-device/edit-manager-device.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderTableComponent
+    HeaderTableComponent,
+    AddDeviceComponent,
+    EditManagerDeviceComponent
   ],
   imports: [
     BrowserModule,
@@ -22,10 +28,12 @@ import {BsDatepickerModule } from 'ngx-bootstrap/datepicker';
     TooltipModule.forRoot(),
     BsDropdownModule.forRoot(),
     BsDatepickerModule.forRoot(),
+    TabsModule.forRoot(),
     BrowserAnimationsModule,
     BrowserModule,
     SelectDropDownModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

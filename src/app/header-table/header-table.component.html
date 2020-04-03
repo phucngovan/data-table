@@ -7,13 +7,13 @@
       <div class="col-md-6">
         <form>
           <div class="option-filter row">
-            <div class="imei col-md-4">
+            <div class="imei col-md-12 col-sm-12 col-lg-4">
               <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Imei">
             </div>
-            <div class="name col-md-4">
-              <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="Tên thiết bị">
+            <div class="name col-md-12 col-sm-12 col-lg-4">
+              <input  type="text" class="form-control" id="exampleFormControlInput2" placeholder="Tên thiết bị">
             </div>
-            <div class="category-device col-md-4">
+            <div class="category-device col-md-12 col-sm-12 col-lg-4">
               <ngx-select-dropdown (change)="selectionChanged($event)"
                                    [multiple]="true"
                                    [config]="config"
@@ -23,7 +23,7 @@
           </div>
           <div class="filter-advanced row" *ngIf="showAdvanced">
             <div class="name-device col-md-4">
-              <input type="text" class="form-control" placeholder="Mã máy/biển số">
+              <input  type="text" class="form-control" placeholder="Mã máy/biển số">
             </div>
             <div class="name-device col-md-4">
               <input type="text" class="form-control" placeholder="Số sim">
@@ -108,100 +108,80 @@
       <i class="fas fa-project-diagram"></i>
     </button>
     <!-- Modal -->
-    <div class="modal fade" id="add-Device" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Thêm nhóm thiết bị</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <form>
-              <div class="form-group">
-                Tên nhóm<label for="device" class="color-red">*</label>
-                <input type="text" class="form-control" id="device" placeholder="">
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary">Thêm</button>
-            <button type="button" class="btn btn-light" data-dismiss="modal">Đóng</button>
-          </div>
-        </div>
-      </div>
-    </div>
+    <app-add-device></app-add-device>
   </div>
-<!--  table-data-->
-<div class="data-table">
-  <table class="table">
-    <thead>
-    <tr>
-      <th scope="col"></th>
-      <th scope="col">
-        <div class="custom-control custom-checkbox mb-3">
-          <input type="checkbox" class="custom-control-input" id="custom" name="example1">
-          <label class="custom-control-label" for="custom"></label>
-        </div>
-      </th>
-      <th scope="col">#</th>
-      <th scope="col">Tài khoản</th>
-      <th scope="col">Imei</th>
-      <th scope="col">Tên</th>
-      <th scope="col">Loại</th>
-      <th scope="col">Sim</th>
-      <th scope="col">Hạn dịch vụ</th>
-      <th scope="col">Hạn bảo hành</th>
-      <th scope="col">Chức năng</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr *ngFor="let data of fakeData">
-      <td scope="col"></td>
-      <td scope="col">
-        <div class="custom-control custom-checkbox mb-3">
-          <input type="checkbox" class="custom-control-input" id="custom-{{data.id}}" name="example1">
-          <label class="custom-control-label" for="custom-{{data.id}}"></label>
-        </div>
-      </td>
-      <td scope="row">{{data.id}}</td>
-      <td>{{data.userName}}</td>
-      <td>{{data.imei}}</td>
-      <td>{{data.name}}</td>
-      <td>{{data.typeName}}</td>
-      <td>{{data.simno}}</td>
-      <td>{{data.serviceExpire | date: 'shortDate'}}</td>
-      <td>{{data.warrantyExpiredDate}}</td>
-      <td><button type="button" class="btn btn-outline-light" tooltip="Sửa"><i class="fas fa-edit" ></i></button>&nbsp;&nbsp;<button  data-toggle="modal" data-target="#delete" type="button" class="btn btn-outline-light" tooltip="Xóa"><i class="fas fa-trash"></i></button></td>
-      <!-- Modal Delete -->
-      <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalDelete" aria-hidden="true">
-        <div class="modal-dialog modal-sm" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Xóa thiết bị</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <div class="icon-text">
-                <div class="alert-icon"><i class="far fa-question-circle"></i></div>
-                <div class="alert-text">Bạn có chắc muốn xóa mục này?</div>
+  <!--  table-data-->
+  <div class="data-table">
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">
+          <div class="custom-control custom-checkbox mb-3">
+            <input type="checkbox" class="custom-control-input" id="custom" name="example1">
+            <label class="custom-control-label" for="custom"></label>
+          </div>
+        </th>
+        <th scope="col">#</th>
+        <th scope="col">Tài khoản</th>
+        <th scope="col">Imei</th>
+        <th scope="col">Tên</th>
+        <th scope="col">Loại</th>
+        <th scope="col">Sim</th>
+        <th scope="col">Hạn dịch vụ</th>
+        <th scope="col">Hạn bảo hành</th>
+        <th scope="col">Chức năng</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let data of fakeData">
+        <td scope="col"></td>
+        <td scope="col">
+          <div class="custom-control custom-checkbox mb-3">
+            <input type="checkbox" class="custom-control-input" id="custom-{{data.id}}" name="example1">
+            <label class="custom-control-label" for="custom-{{data.id}}"></label>
+          </div>
+        </td>
+        <td scope="row">{{data.id}}</td>
+        <td>{{data.userName}}</td>
+        <td>{{data.imei}}</td>
+        <td>{{data.name}}</td>
+        <td>{{data.typeName}}</td>
+        <td>{{data.simno}}</td>
+        <td>{{data.serviceExpire | date: 'shortDate'}}</td>
+        <td>{{data.warrantyExpiredDate}}</td>
+        <td><button type="button" data-toggle="modal" data-target="#edit" class="btn btn-outline-light" tooltip="Sửa"><i class="fas fa-edit" ></i></button>&nbsp;&nbsp;<button  data-toggle="modal" data-target="#delete" type="button" class="btn btn-outline-light" tooltip="Xóa"><i class="fas fa-trash"></i></button></td>
+        <!-- Modal Delete -->
+        <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalDelete" aria-hidden="true">
+          <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Xóa thiết bị</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
               </div>
+              <div class="modal-body">
+                <div class="icon-text">
+                  <div class="alert-icon"><i class="far fa-question-circle"></i></div>
+                  <div class="alert-text">Bạn có chắc muốn xóa mục này?</div>
+                </div>
 
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-primary">Xác nhận</button>
-              <button type="button" class="btn btn-light" data-dismiss="modal">Đóng</button>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Xác nhận</button>
+                <button type="button" class="btn btn-light" data-dismiss="modal">Đóng</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <!--End modal Delete-->
-    </tr>
-    </tbody>
-  </table>
+        <!--End modal Delete-->
+        <app-edit-manager-device></app-edit-manager-device>
+      </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
-</div>
+<router-outlet></router-outlet>
+
 

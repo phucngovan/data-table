@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'app-header-table',
@@ -6,6 +7,8 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./header-table.component.scss']
 })
 export class HeaderTableComponent implements OnInit {
+  public test = [];
+  addForm: FormGroup;
   public showAdvanced = false;
   public dropdownOptions = [
     'WeTrack2', 'OB22' , 'HVT001', 'TG102LE', 'TG102V', 'TG102E', 'GT06N', 'AT4'
@@ -144,7 +147,8 @@ export class HeaderTableComponent implements OnInit {
   ngOnInit(): void {
   }
   selectionChanged(event) {
-    console.log(event.value);
+    this.test = event;
+    console.log(event.value, this.test);
   }
   resetFilter() {
   }
