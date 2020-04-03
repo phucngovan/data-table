@@ -49,14 +49,9 @@
 .margin-right-10 {
   margin-right: 10px;
 }
-.modal-header {
-  background-color: #f8f8f8;
-}
+
 .color-red {
   color: red;
-}
-.modal-footer {
-  border-top: none;
 }
 .data-table {
  .table {
@@ -67,16 +62,35 @@
      }
    }
    td {
-     i {
-       color: red;
+     button {
+       border: none;
+       i {
+         color: red;
+       }
      }
    }
  }
 }
-//config ngx-select-dropdown
-.ngx-dropdown-container[_ngcontent-ese-c47] button[_ngcontent-ese-c47] span[_ngcontent-ese-c47] {
-  color: gray !important;
+//config modal
+.modal-header {
+  background-color: #f8f8f8;
 }
-.ngx-dropdown-container[_ngcontent-bai-c47] button[_ngcontent-bai-c47] .nsdicon-angle-down[_ngcontent-bai-c47]::before {
-  top : 5px !important;
+.modal-body {
+  .icon-text {
+    display: flex;
+    justify-content: space-around;
+    .alert-icon {
+      font-size: 30px;
+      color: red;
+    }
+    .alert-text {
+      padding-top: 12px;
+      font-size: 14px;
+    }
+  }
+
 }
+.modal-footer {
+  border-top: none;
+}
+//end config modal

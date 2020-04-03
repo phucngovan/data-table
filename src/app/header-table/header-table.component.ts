@@ -144,7 +144,7 @@ export class HeaderTableComponent implements OnInit {
   ngOnInit(): void {
   }
   selectionChanged(event) {
-    console.log(event);
+    console.log(event.value);
   }
   resetFilter() {
   }
