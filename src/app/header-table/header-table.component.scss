@@ -10,6 +10,7 @@
  }
  .filter {
      padding-left: 25px;
+   padding-right: 25px;
    .checkbox-tkc {
      .tkc::before {
        top: 0.6rem !important;
@@ -55,6 +56,9 @@
 }
 .data-table {
  .table {
+   .min-width {
+     min-width: 150px;
+   }
    th {
      border-top: none;
      .mb-3 {
@@ -94,3 +98,19 @@
   border-top: none;
 }
 //end config modal
+
+@media (max-width: 988px) {
+  .table-manager-device {
+    .filter {
+      .margin-bottom {
+        margin-bottom: 10px;
+      }
+
+    }
+  }
+}
+@media (max-width: 1120px) {
+  .data-table {
+    overflow-x: auto;
+  }
+}

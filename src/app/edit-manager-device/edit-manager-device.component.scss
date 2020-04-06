@@ -1,18 +1,126 @@
+
+.form-group {
+  label {
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgb(100, 108, 154);
+  }
+}
 //config modal
+@media (min-width: 992px) {
+  .config-width-lg {
+    max-width: 1000px !important;
+  }
+}
+
 .modal-header {
   background-color: #f8f8f8;
 }
+
 .modal-footer {
   border-top: none;
 }
-.modal-body {
+
+.table-child {
+  max-height: calc(100vh - 100px);
+  overflow: auto;
   .tabs-edit {
-    button {
+    .device-information {
+      margin-top: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      .row {
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-top: 20px;
+      }
+      .form-group {
+        .device-icon {
+          display: flex;
+          justify-content: space-between;
+          button {
+            border: none;
+            background: white;
+            i {
+              font-size: 23px;
+              color: #5578eb;
+            }
+          }
+        }
+      }
+    }
+    .btn-button {
       background-color: #5578eb;
       padding: 5px;
       border: none;
       margin-top: 20px;
       color: white;
     }
+    .add-sensor {
+      .padding-7 {
+        padding: 7px;
+      }
+      .margin-top-0 {
+        margin-top: 0px;
+        .overflow-x {
+          max-height: calc(100vh - 200px);
+          overflow-x: auto;
+        }
+      }
+      .tabs-add-sensor {
+        .basic, .advanced {
+          margin-top: 15px;
+          .form-group {
+            label {
+              font-size: 1rem;
+              font-weight: 400;
+              color: rgb(100, 108, 154);
+            }
+          }
+          .wrapper {
+            .icon {
+              //margin-right: 10px;
+              border-radius: 50%;
+              border: none;
+              background: white;
+              width: 30px;
+              height: 30px;
+            }
+            .icon:hover {
+              border-radius: 50%;
+              border:solid 1px #5578eb;
+              background: white;
+            }
+
+          }
+        }
+      }
+    }
+    table {
+      tr {
+        .min-width-140 {
+          min-width: 140px;
+        }
+      }
+    }
   }
 }
+
+  .tabs-edit {
+    .table {
+      th {
+        border-top: none;
+      }
+    }
+  }
+  //select config
+select:required:invalid {
+  color: gray;
+}
+option[value=""][disabled] {
+  display: none;
+}
+option {
+  color: black;
+}
+

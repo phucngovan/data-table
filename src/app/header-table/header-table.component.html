@@ -4,16 +4,16 @@
   </h4>
   <div class="filter">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-12 col-lg-6 col-sm-12">
         <form>
           <div class="option-filter row">
-            <div class="imei col-md-12 col-sm-12 col-lg-4">
+            <div class="margin-bottom imei col-md-12 col-sm-12 col-lg-4">
               <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Imei">
             </div>
-            <div class="name col-md-12 col-sm-12 col-lg-4">
+            <div class="margin-bottom name col-md-12 col-sm-12 col-lg-4">
               <input  type="text" class="form-control" id="exampleFormControlInput2" placeholder="Tên thiết bị">
             </div>
-            <div class="category-device col-md-12 col-sm-12 col-lg-4">
+            <div class="category-device margin-bottom col-md-12 col-sm-12 col-lg-4">
               <ngx-select-dropdown (change)="selectionChanged($event)"
                                    [multiple]="true"
                                    [config]="config"
@@ -72,7 +72,7 @@
           </div>
         </form>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-12 col-lg-6 col-sm-12">
         <div class="custom-control custom-checkbox mb-3 checkbox-tkc">
           <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
           <label class="custom-control-label tkc" for="customCheck">Tài khoản con</label>
@@ -123,14 +123,14 @@
           </div>
         </th>
         <th scope="col">#</th>
-        <th scope="col">Tài khoản</th>
+        <th scope="col" class="min-width">Tài khoản</th>
         <th scope="col">Imei</th>
         <th scope="col">Tên</th>
         <th scope="col">Loại</th>
         <th scope="col">Sim</th>
-        <th scope="col">Hạn dịch vụ</th>
-        <th scope="col">Hạn bảo hành</th>
-        <th scope="col">Chức năng</th>
+        <th scope="col" class="min-width">Hạn dịch vụ</th>
+        <th scope="col" class="min-width">Hạn bảo hành</th>
+        <th scope="col" class="min-width">Chức năng</th>
       </tr>
       </thead>
       <tbody>
@@ -166,7 +166,6 @@
                   <div class="alert-icon"><i class="far fa-question-circle"></i></div>
                   <div class="alert-text">Bạn có chắc muốn xóa mục này?</div>
                 </div>
-
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-primary">Xác nhận</button>
@@ -183,5 +182,6 @@
   </div>
 </div>
 <router-outlet></router-outlet>
+
 
 

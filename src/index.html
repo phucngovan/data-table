@@ -13,13 +13,26 @@
   </script>
   <link rel="stylesheet" href="https://unpkg.com/ngx-bootstrap/datepicker/bs-datepicker.css">
   <style>
+    .ngx-dropdown-container button {
+      /*display: flex !important;*/
+    }
     .ngx-dropdown-container button span {
       color: gray !important;
+      /*white-space: nowrap;*/
+      /*text-overflow: ellipsis;*/
+      /*overflow: hidden;*/
     }
     .ngx-dropdown-container button .nsdicon-angle-down::before {
       width: 8px !important;
       height: 8px !important;
       top: 7px!important;
+      /*position: absolute !important;*/
+      /*right: 10px !important;*/
+    }
+    @media only screen and (max-width: 600px) {
+      .table-test {
+        overflow: auto;
+      }
     }
   </style>
 </head>

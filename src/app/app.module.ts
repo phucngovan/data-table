@@ -13,6 +13,7 @@ import {BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { TabsModule } from 'ngx-bootstrap';
 import { AddDeviceComponent } from './add-device/add-device.component';
 import { EditManagerDeviceComponent } from './edit-manager-device/edit-manager-device.component';
+import { ModalModule } from 'ngx-bootstrap';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { EditManagerDeviceComponent } from './edit-manager-device/edit-manager-d
     BsDropdownModule.forRoot(),
     BsDatepickerModule.forRoot(),
     TabsModule.forRoot(),
+    ModalModule.forRoot(),
     BrowserAnimationsModule,
     BrowserModule,
     SelectDropDownModule,
